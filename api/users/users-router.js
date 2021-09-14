@@ -35,7 +35,7 @@ router.get('/', restricted, async (req, res, next) => {
     "message": "You shall not pass!"
   }
  */
-router.use((err, req, res, next) => {
+router.use((err, req, res, next) => { //eslint-disable-line
   res.status(err.status).json(err.message)
 })
 
